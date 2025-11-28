@@ -20,5 +20,5 @@ jobs:
       - name: Compile
         run: javac src/Main.java
 
-	- name: Run
- 	 run: java -cp src Main
+      - name: Run
+        run: java -cp src Main
