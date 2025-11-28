@@ -7,13 +7,18 @@ on:
 jobs:
   package:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v3
+
       - name: Set up JDK
         uses: actions/setup-java@v3
         with:
+          distribution: temurin
           java-version: '17'
+
       - name: Compile
         run: javac src/Main.java
+
       - name: Create JAR
         run: jar cvf Main.jar -C src/ .
